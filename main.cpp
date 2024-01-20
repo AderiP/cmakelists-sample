@@ -2,13 +2,13 @@
 #include <yaml-cpp/yaml.h>
 #include <string>
 #include <opencv2/highgui/highgui.hpp>
-#include <my-lib/my_lib.hpp>
 #include "src/test.hpp"
+#include <my-lib/my_lib.hpp>
 
 int main() {
     std::cout << "OpenCV version: " << cv::getVersionString() << std::endl;
 
-    YAML::Node config = YAML::LoadFile("./../config.yaml");
+    YAML::Node config = YAML::LoadFile("config.yaml");
 
     // パースしたデータを表示する
     std::cout << "name: " << config["name"].as<std::string>() << std::endl;

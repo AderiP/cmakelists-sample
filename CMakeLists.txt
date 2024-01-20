@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(${PROJECT_NAME} main.cpp
         src/test.cpp src/test.hpp)
 
-add_library(my_lib SHARED lib/my-lib/my_lib.hpp lib/my-lib/my_lib.cpp)
+add_library(my_lib STATIC lib/my-lib/my_lib.hpp lib/my-lib/my_lib.cpp)
 target_include_directories(my_lib PUBLIC lib)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_lib)
 
